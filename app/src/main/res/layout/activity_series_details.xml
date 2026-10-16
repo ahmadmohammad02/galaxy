@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030914"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:padding="18dp">
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="#111827">
+
+        <ImageView
+            android:id="@+id/seriesDetailPoster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Series poster"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/seriesDetailPosterPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="SERIES"
+            android:textColor="#61708B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/seriesDetailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/seriesDetailMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#85DFFF"
+            android:textSize="15sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/seriesDetailPlot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:textColor="#E5EAF2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/seriesDetailCast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:textColor="#B9C5D5"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/seriesDetailDirector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:textColor="#B9C5D5"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/seriesDetailReleaseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#B9C5D5"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/seriesBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:text="Episodes"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/seriesSeasonSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#101827"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/seriesEpisodeStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="Loading episodes..."
+            android:textColor="#B9C5D5"
+            android:textSize="13sp" />
+
+        <ListView
+            android:id="@+id/seriesEpisodeList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#080D18"
+            android:choiceMode="singleChoice"
+            android:divider="#26364B"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="true"
+            android:listSelector="@drawable/episode_list_selector" />
+
+    </LinearLayout>
+</LinearLayout>

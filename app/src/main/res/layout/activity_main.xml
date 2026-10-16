@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020817"
+    android:orientation="horizontal"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:text="●"
+                android:textColor="#38BDF8"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:text="●"
+                android:textColor="#475569"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:text="●"
+                android:textColor="#475569"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sign In"
+            android:textColor="#F8FAFC"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/loginSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Enter your 12-digit activation code"
+            android:textColor="#CBD5E1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/deviceMacAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#94A3B8"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/codeInput"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="26dp"
+            android:background="#0F172A"
+            android:gravity="center"
+            android:hint="12-digit code"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColor="#F8FAFC"
+            android:textColorHint="#94A3B8"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#38BDF8"
+            android:text="Sign In"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#A7F3D0"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* APIClient.swift */; };
+		A10000000000000000000002 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* AppModel.swift */; };
+		A10000000000000000000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* ContentView.swift */; };
+		A10000000000000000000004 /* GalaxyTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* GalaxyTVApp.swift */; };
+		A10000000000000000000005 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* APIClient.swift */; };
+		A10000000000000000000006 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* AppModel.swift */; };
+		A10000000000000000000007 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* ContentView.swift */; };
+		A10000000000000000000008 /* GalaxyTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* GalaxyTVApp.swift */; };
+		A10000000000000000000009 /* ActivationCodeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* ActivationCodeStore.swift */; };
+		A10000000000000000000010 /* ActivationCodeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* ActivationCodeStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10000000000000000000001 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* GalaxyTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyTVApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* GalaxyTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyTVApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000008 /* APP-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APP-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000009 /* GalaxyTV-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GalaxyTV-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000010 /* ActivationCodeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationCodeStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		C10000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000002 /* Shared */,
+				D10000000000000000000003 /* iOS */,
+				D10000000000000000000004 /* tvOS */,
+				D10000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D10000000000000000000002 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* APIClient.swift */,
+				B10000000000000000000002 /* AppModel.swift */,
+				B10000000000000000000003 /* ContentView.swift */,
+				B10000000000000000000010 /* ActivationCodeStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000003 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000004 /* GalaxyTVApp.swift */,
+				B10000000000000000000006 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000004 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000005 /* GalaxyTVApp.swift */,
+				B10000000000000000000007 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000008 /* APP-IOS.app */,
+				B10000000000000000000009 /* GalaxyTV-tvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10000000000000000000001 /* GalaxyTV-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000002 /* Build configuration list for PBXNativeTarget "GalaxyTV-iOS" */;
+			buildPhases = (
+				C10000000000000000000001 /* Frameworks */,
+				C10000000000000000000003 /* Sources */,
+				C10000000000000000000005 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = "GalaxyTV-iOS";
+			productName = "APP-IOS";
+			productReference = B10000000000000000000008 /* APP-IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E10000000000000000000002 /* GalaxyTV-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000003 /* Build configuration list for PBXNativeTarget "GalaxyTV-tvOS" */;
+			buildPhases = (
+				C10000000000000000000002 /* Frameworks */,
+				C10000000000000000000004 /* Sources */,
+				C10000000000000000000006 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = "GalaxyTV-tvOS";
+			productName = "GalaxyTV-tvOS";
+			productReference = B10000000000000000000009 /* GalaxyTV-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					E10000000000000000000001 = {CreatedOnToolsVersion = 16.0; };
+					E10000000000000000000002 = {CreatedOnToolsVersion = 16.0; };
+				};
+			};
+			buildConfigurationList = F10000000000000000000001 /* Build configuration list for PBXProject "GalaxyTV" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = D10000000000000000000001;
+			productRefGroup = D10000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E10000000000000000000001 /* GalaxyTV-iOS */,
+				E10000000000000000000002 /* GalaxyTV-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C10000000000000000000005 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		C10000000000000000000006 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10000000000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* APIClient.swift in Sources */,
+				A10000000000000000000002 /* AppModel.swift in Sources */,
+				A10000000000000000000003 /* ContentView.swift in Sources */,
+				A10000000000000000000004 /* GalaxyTVApp.swift in Sources */,
+				A10000000000000000000009 /* ActivationCodeStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10000000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000005 /* APIClient.swift in Sources */,
+				A10000000000000000000006 /* AppModel.swift in Sources */,
+				A10000000000000000000007 /* ContentView.swift in Sources */,
+				A10000000000000000000008 /* GalaxyTVApp.swift in Sources */,
+				A10000000000000000000010 /* ActivationCodeStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F10000000000000000000004 /* Debug project */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F10000000000000000000005 /* Release project */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F10000000000000000000006 /* iOS Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxytv.ios;
+				PRODUCT_NAME = "APP-IOS";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10000000000000000000007 /* iOS Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxytv.ios;
+				PRODUCT_NAME = "APP-IOS";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F10000000000000000000008 /* tvOS Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxytv.tvos;
+				PRODUCT_NAME = "GalaxyTV-tvOS";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		F10000000000000000000009 /* tvOS Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxytv.tvos;
+				PRODUCT_NAME = "GalaxyTV-tvOS";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10000000000000000000001 /* Build configuration list for PBXProject "GalaxyTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000004 /* Debug project */,
+				F10000000000000000000005 /* Release project */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000002 /* Build configuration list for PBXNativeTarget "GalaxyTV-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000006 /* iOS Debug */,
+				F10000000000000000000007 /* iOS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000003 /* Build configuration list for PBXNativeTarget "GalaxyTV-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000008 /* tvOS Debug */,
+				F10000000000000000000009 /* tvOS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E10000000000000000000003 /* Project object */;
+}

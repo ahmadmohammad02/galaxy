@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020817">
+
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo_login" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/splashVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:resize_mode="zoom"
+        app:show_buffering="never"
+        app:use_controller="false" />
+</FrameLayout>

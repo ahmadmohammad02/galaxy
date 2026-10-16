@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030914"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="0.27"
+        android:background="#080811"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/movieSearchInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Search movies"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:singleLine="true"
+                android:textColor="#10131C"
+                android:textColorHint="#687080"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/refreshMovieCategories"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="#171221"
+                android:contentDescription="Refresh movie categories"
+                android:focusable="true"
+                android:src="@android:drawable/ic_popup_sync"
+                android:tint="#FFFFFF" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/catalogSourceGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:background="#15101F"
+            android:checkedButton="@id/catalogMoviesSource"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/catalogMoviesSource"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Movies"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/catalogSeriesSource"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Series"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/movieCategoryStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:text="Categories"
+            android:textColor="#C6C4D0"
+            android:textSize="13sp" />
+
+        <ListView
+            android:id="@+id/movieCategoryList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#05050A"
+            android:divider="#21152A"
+            android:dividerHeight="1dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusRight="@id/movieGrid"
+            android:listSelector="@drawable/movie_category_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.73"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/movieGridTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp"
+            android:text="Movies"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/movieGridStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingBottom="6dp"
+            android:textColor="#B7C5D8"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <GridView
+                android:id="@+id/movieGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="132dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:horizontalSpacing="10dp"
+                android:drawSelectorOnTop="true"
+                android:listSelector="@drawable/movie_poster_focus"
+                android:nextFocusLeft="@id/movieCategoryList"
+                android:numColumns="auto_fit"
+                android:padding="6dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+
+            <TextView
+                android:id="@+id/movieGridEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Select a category to browse movies."
+                android:textColor="#A9B4C5"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:paddingStart="28dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="28dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Galaxy TV"
+        android:textColor="#8E7BFF"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/home_tile_small"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="18dp"
+            android:layout_weight="0.38"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Settings"
+                    android:textColor="#E8ECFF"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/accountSettingsTab"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/settings_menu_item"
+                    android:backgroundTint="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:minHeight="0dp"
+                    android:nextFocusUp="@id/settingsLogoutButton"
+                    android:nextFocusDown="@id/advancedSettingsTab"
+                    android:paddingStart="12dp"
+                    android:text="◉  Account"
+                    android:textAllCaps="false"
+                    android:textColor="#D6DEFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/advancedSettingsTab"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/settings_menu_selected"
+                    android:backgroundTint="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:minHeight="0dp"
+                    android:nextFocusUp="@id/accountSettingsTab"
+                    android:nextFocusDown="@id/appearanceSettingsTab"
+                    android:paddingStart="12dp"
+                    android:text="⚙  Advanced"
+                    android:textAllCaps="false"
+                    android:textColor="#D6DEFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/appearanceSettingsTab"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/settings_menu_item"
+                    android:backgroundTint="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:minHeight="0dp"
+                    android:nextFocusUp="@id/advancedSettingsTab"
+                    android:nextFocusDown="@id/aboutSettingsTab"
+                    android:paddingStart="12dp"
+                    android:text="▦  Appearance"
+                    android:textAllCaps="false"
+                    android:textColor="#D6DEFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/aboutSettingsTab"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/settings_menu_item"
+                    android:backgroundTint="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:minHeight="0dp"
+                    android:nextFocusUp="@id/appearanceSettingsTab"
+                    android:nextFocusDown="@id/settingsLogoutButton"
+                    android:paddingStart="12dp"
+                    android:text="ⓘ  About"
+                    android:textAllCaps="false"
+                    android:textColor="#D6DEFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/settingsLogoutButton"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/settings_logout"
+                    android:backgroundTint="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:minHeight="0dp"
+                    android:nextFocusUp="@id/aboutSettingsTab"
+                    android:nextFocusDown="@id/accountSettingsTab"
+                    android:text="⏻  Logout"
+                    android:textAllCaps="false"
+                    android:textColor="#FF9DB0"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.62"
+            android:background="@drawable/home_tile_small"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/settingsSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#E8ECFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/settingsSectionDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#98A7CA"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="9dp">
+
+                    <TextView
+                        android:id="@+id/settingsRowOneLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.42"
+                        android:textColor="#98A7CA"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/settingsRowOneValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.58"
+                        android:ellipsize="middle"
+                        android:maxLines="1"
+                        android:textColor="#DCE6FF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#28304A" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="9dp">
+
+                    <TextView
+                        android:id="@+id/settingsRowTwoLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.42"
+                        android:textColor="#98A7CA"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/settingsRowTwoValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.58"
+                        android:textColor="#DCE6FF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#28304A" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="9dp">
+
+                    <TextView
+                        android:id="@+id/settingsRowThreeLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.42"
+                        android:textColor="#98A7CA"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/settingsRowThreeValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.58"
+                        android:ellipsize="middle"
+                        android:maxLines="1"
+                        android:textColor="#DCE6FF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="© Galaxy TV"
+        android:textColor="#68738F"
+        android:textSize="11sp" />
+</LinearLayout>

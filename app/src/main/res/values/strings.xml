@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Galaxy TV</string>
+    <string name="welcome_title">Galaxy TV</string>
+    <string name="welcome_subtitle">Your smart TV experience</string>
+    <string name="explore_button">Explore</string>
+    <string name="device_mac_label">Device MAC: %1$s</string>
+    <string name="device_mac_unavailable">Unavailable</string>
+</resources>

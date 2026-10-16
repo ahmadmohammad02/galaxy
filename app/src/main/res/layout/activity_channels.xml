@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/channelsVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:show_buffering="when_playing"
+        app:use_controller="true" />
+
+    <LinearLayout
+        android:id="@+id/channelPanels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="0.28"
+            android:background="#B0000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/packagePaneTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:text="PACKAGES"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/litePackageList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#22000000"
+                android:choiceMode="singleChoice"
+                android:divider="#44FFFFFF"
+                android:dividerHeight="1dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusRight="@id/liteChannelList"
+                android:listSelector="@drawable/channel_list_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="0.28"
+            android:background="#B0000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:text="CHANNELS"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/liteChannelList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#22000000"
+                android:choiceMode="singleChoice"
+                android:divider="#44FFFFFF"
+                android:dividerHeight="1dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusLeft="@id/litePackageList"
+                android:listSelector="@drawable/channel_list_selector" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.44" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/channelStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:background="#B0000000"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:text="Loading packages..."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</FrameLayout>
