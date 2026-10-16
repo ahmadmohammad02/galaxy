@@ -2,30 +2,41 @@ import AVKit
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var model = GalaxyAppModel()
+    @StateObject private var sessionWatcher = ActivationSessionWatcher.shared
+    @StateObject private var appModel = GalaxyAppModel()
+    @State private var showSplash = true
 
     var body: some View {
-        NavigationStack {
-            if model.isRestoring {
-                ProgressView("Loading Galaxy TV")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(GalaxyStyle.background)
-            } else if model.activeCode == nil {
-                ActivationView(model: model)
+        Group {
+            if showSplash {
+                SplashScreen()
+            } else if sessionWatcher.activeCode == nil {
+                ActivationView(model: appModel)
             } else {
-                HomeView(model: model)
+                HomeView(model: appModel)
             }
         }
-        .preferredColorScheme(.dark)
-        .task { model.restoreSession() }
-        .alert("Server message", isPresented: Binding(
-            get: { model.activationNotice != nil },
-            set: { if !$0 { model.dismissActivationNotice() } }
-        )) {
-            Button("OK") { model.dismissActivationNotice() }
-        } message: {
-            Text(model.activationNotice ?? "")
+        .onAppear {
+            Task {
+                await sessionWatcher.restoreSession()
+                sessionWatcher.startWatching()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                withAnimation { showSplash = false }
+            }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .splashScreenFinished)) { _ in
+            withAnimation { showSplash = false }
+        }
+        .alert("تنبيه", isPresented: $sessionWatcher.showExpirationNotice) {
+            Button("تم") {
+                sessionWatcher.showExpirationNotice = false
+                sessionWatcher.signOut()
+            }
+        } message: {
+            Text("رمز التفعيل الخاص بك قد انتهت صلاحيته. يرجى تسجيل الدخول مرة أخرى.")
+        }
+        .environmentObject(sessionWatcher)
     }
 }
 
