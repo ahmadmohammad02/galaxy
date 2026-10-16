@@ -1,0 +1,35 @@
+name: Build Galaxy TV Apple
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build iOS
+        run: |
+          mkdir -p Apple/build
+          xcodebuild -project Apple/GalaxyTV.xcodeproj -scheme GalaxyTV-iOS -destination 'platform=iOS Simulator,name=iPhone 15' -derivedDataPath Apple/build/DerivedData build
+      - name: Upload iOS .app
+        uses: actions/upload-artifact@v4
+        with:
+          name: GalaxyTV-iOS
+          path: Apple/build/DerivedData/**/*.app
+
+  build-tvos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build tvOS
+        run: |
+          mkdir -p Apple/build
+          xcodebuild -project Apple/GalaxyTV.xcodeproj -scheme GalaxyTV-tvOS -destination 'platform=tvOS Simulator,name=Apple TV' -derivedDataPath Apple/build/DerivedData build
+      - name: Upload tvOS .app
+        uses: actions/upload-artifact@v4
+        with:
+          name: GalaxyTV-tvOS
+          path: Apple/build/DerivedData/**/*.app

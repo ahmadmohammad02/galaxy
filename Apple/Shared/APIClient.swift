@@ -52,8 +52,9 @@ enum GalaxyAPIError: LocalizedError {
 }
 
 struct GalaxyAPIClient {
-    private let primaryEndpoint = "http://maghrebtv.xyz:2082/iptv/V6/API-V6.php"
-    private let backupEndpoint: String? = "http://maghrebtv.xyz:2082/iptv/V6/API-V6.php"
+    private let primaryEndpoint = "http://localhost:8080/iptv/V6/API-V6.php"
+
+    private let backupEndpoint: String? = "http://localhost:8080/iptv/V6/API-V6.php"
     private let xorKey = Array("y]w(7r+W3e>@wEiM0a9".utf8)
     private let primaryDownUntilKey = "galaxy.primary-down-until"
     private let tenDays: TimeInterval = 10 * 24 * 60 * 60
